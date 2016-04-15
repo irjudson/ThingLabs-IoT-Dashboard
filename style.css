@@ -1,0 +1,41 @@
+body {
+    padding: 50px;
+    font: 10px sans-serif;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+svg {
+    font: 10px sans-serif;
+}
+.line {
+    fill: none;
+    stroke: #000;
+    stroke-width: 1.5px;
+}
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+.graph .axis {
+    stroke-width: 1;
+}
+.graph .axis .tick line {
+    stroke: black;
+}
+.graph .axis .tick text {
+    fill: black;
+    font-size: 0.7em;
+}
+.graph .axis .domain {
+    fill: none;
+    stroke: black;
+}
+.graph .group {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.5;
+}                    

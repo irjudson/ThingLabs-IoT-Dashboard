@@ -1,0 +1,14 @@
+{
+  "name": "website",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "azure-event-hubs": "0.0.1",
+    "coffee-script": "^1.10.0",
+    "connect": "^3.4.1",
+    "express.io": "^1.1.13"
+  }
+}
