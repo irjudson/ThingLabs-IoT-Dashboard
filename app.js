@@ -20,6 +20,10 @@ app.get('/graph.js', function(req, res) {
     res.sendfile(__dirname + '/graph.js')
 });
 
+app.get('/favicon.ico', function(req, res) {
+    res.sendfile(__dirname + '/favicon-32x32.png')
+});
+
 // Instantiate an eventhub client
 eventHubClient = require('azure-event-hubs').Client;
 var client = eventHubClient.fromConnectionString(connectionString, 'thinglabseventhub')
