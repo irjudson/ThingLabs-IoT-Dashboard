@@ -9,20 +9,10 @@ app.use(express.session({secret: 'thinglabs'}))
 // Session is automatically setup on initial request.
 app.get('/', function(req, res) {
     req.session.loginDate = new Date().toString()
-    res.sendfile(__dirname + '/client.html')
+    res.sendfile(__dirname + '/index.html')
 });
 
-app.get('/style.css', function(req, res) {
-    res.sendfile(__dirname + '/style.css')
-});
-
-app.get('/graph.js', function(req, res) {
-    res.sendfile(__dirname + '/graph.js')
-});
-
-app.get('/favicon.ico', function(req, res) {
-    res.sendfile(__dirname + '/favicon-32x32.png')
-});
+app.use(express.static(__dirname + '/static'));
 
 // Instantiate an eventhub client
 eventHubClient = require('azure-event-hubs').Client;
