@@ -10,11 +10,9 @@ var n = 60,
     accumulatedTime = 0,
     averageWindowTime = 0,
     sampleCount = 0,
-    hostname = process.env.SOMETHING || 'http://localhost',
-    port = process.env.PORTSOMETHING,
-    labels = ['maxtempf', 'mintempf', 'avgtempf', 'maxtempc', 'mintempc', 'avgtempc', 'maxhumidity', 'minhumidity', 'avghumidity'];
+    labels = ['maxlight', 'avglight', 'minlight'];
 
-var io = io.connect('http://'+hostname+':'+port);
+var io = io.connect();
                        
 function selectColor(colorNum, colors){
     if (colors < 1) colors = 1; // defaults to one color - avoid divide by zero
@@ -37,7 +35,7 @@ var x = d3.time.scale()
     .range([0, width]);
 
 var y = d3.scale.linear()
-    .domain([0, 100])
+    .domain([0, 1024])
     .range([height, 0]);
 
 var line = d3.svg.line()
