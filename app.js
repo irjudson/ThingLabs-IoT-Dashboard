@@ -42,4 +42,4 @@ app.io.route('ready', function(req) {
     });
 });
 
-app.listen(7076)
+app.listen(process.env.port || 7076)
