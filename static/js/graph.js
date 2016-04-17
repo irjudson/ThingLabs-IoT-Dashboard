@@ -10,7 +10,7 @@ var n = 60,
     accumulatedTime = 0,
     averageWindowTime = 0,
     sampleCount = 0,
-    labels = ['maxtempf', 'mintempf', 'avgtempf', 'maxtempc', 'mintempc', 'avgtempc', 'maxhumidity', 'minhumidity', 'avghumidity'];
+    labels = ['minlight', 'avglight', 'maxlight'];
 
 var io = io.connect();
                        
