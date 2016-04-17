@@ -10,11 +10,9 @@ var n = 60,
     accumulatedTime = 0,
     averageWindowTime = 0,
     sampleCount = 0,
-    hostname = process.env.SOMETHING || 'http://localhost',
-    port = process.env.PORTSOMETHING,
     labels = ['maxtempf', 'mintempf', 'avgtempf', 'maxtempc', 'mintempc', 'avgtempc', 'maxhumidity', 'minhumidity', 'avghumidity'];
 
-var io = io.connect('http://'+hostname+':'+port);
+var io = io.connect();
                        
 function selectColor(colorNum, colors){
     if (colors < 1) colors = 1; // defaults to one color - avoid divide by zero
